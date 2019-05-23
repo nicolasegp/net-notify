@@ -1,0 +1,28 @@
+#!/bin/bash
+
+DNS_SERVER=8.8.8.8
+INTERVALO=10
+INTENTO=1
+
+TOKEN='123456:AbcDefGhi-JklMnoPrw'
+CHAT='12345'
+
+clear
+echo
+echo -e "\e[93m [Revisando] \e[96m$DNS_SERVER"
+echo
+
+while true; do
+	if ping -q -c 1 -W 1 $DNS_SERVER > /dev/null; then
+		IP=$(curl -s 'ifconfig.me')
+		echo -e "\e[92m Llegó el Internet"
+		echo -e "\e[96m ● $IP"
+		echo -e "<b>Llegó el Internet</b>\nIP: <code>$IP</code>" | telegram -t $TOKEN -c $CHAT -H -
+		break
+	else
+		echo -ne "\e[91m ● Intento: $INTENTO\r"
+		INTENTO=$((INTENTO+1))
+	fi
+	sleep $INTERVALO
+done
+echo
