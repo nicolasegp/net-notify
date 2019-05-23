@@ -32,6 +32,10 @@ sudo nano /usr/local/bin/net-notify
 
 Modificar las variables **TOKEN** _(de su Bot)_ y **CHAT** _(de su cuenta de telegram)_
 
+## Uso
+
+Una vez editado el script cerramos y abrimos una nueva terminal y usamos el comando: `net-notify`
+
 ## Modificaciones
 
 * El usuario [u/knvngy](https://www.reddit.com/user/knvngy/) dio la recomendación de editar la misma linea con los intentos para asi evitar un log muy largo y saturara de información la terminal.
