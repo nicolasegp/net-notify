@@ -1,8 +1,8 @@
 # net-notify
 
-Mini-Proyecto para notificar cuando llegue el Internet a un equipo mediante el uso de la terminal.
+Mini-Proyecto para notificar cuando llegue el Internet a un equipo mediante el uso de la Terminal y Telegram.
 
-Hilo en reddit: https://www.reddit.com/r/vzla/comments/brqio0/bash_scripting_notificar_que_llego_internet/
+> Hilo en Reddit: https://www.reddit.com/r/vzla/comments/brqio0/bash_scripting_notificar_que_llego_internet/
 
 ## Requerimientos
 
