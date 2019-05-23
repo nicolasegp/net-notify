@@ -21,7 +21,7 @@ Modificar las variables **TOKEN** _(de su Bot)_ y **CHAT** _(de su cuenta de tel
 
 ## Uso
 
-Una vez editado el script cerramos y abrimos una nueva terminal y usamos el comando: `net-notify`
+Una vez no tengamos internet podemos ejecutar el comando `net-notify` y minimizar la terminal, la idea del script es que nos llegue un mensaje en Telegram apenas el equipo se conecte a internet.
 
 ## Modificaciones
 
