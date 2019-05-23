@@ -4,20 +4,7 @@ Mini-Proyecto para notificar cuando llegue el Internet a un equipo mediante el u
 
 > Hilo en Reddit: https://www.reddit.com/r/vzla/comments/brqio0/bash_scripting_notificar_que_llego_internet/
 
-## Requerimientos
-
-* El proyecto usa [telegram.sh](https://github.com/fabianonline/telegram.sh) (Agregado en éste repositorio)
-
 ## Instalación
-
-#### Para telegram.sh
-
-```bash
-sudo curl https://raw.githubusercontent.com/nicolasegp/net-notify/master/telegram -o /usr/local/bin/telegram
-sudo chmod a+rx /usr/local/bin/telegram
-```
-
-#### Para net-notify
 
 ```bash
 sudo curl https://raw.githubusercontent.com/nicolasegp/net-notify/master/net-notify -o /usr/local/bin/net-notify
@@ -30,13 +17,19 @@ sudo chmod a+rx /usr/local/bin/net-notify
 sudo nano /usr/local/bin/net-notify
 ```
 
-Modificar las variables **TOKEN** _(de su Bot)_ y **CHAT** _(de su cuenta de telegram)_
+Modificar las variables **TOKEN** _(de su Bot)_ y **CHAT** _(de su cuenta de telegram, grupo o canal)_
 
 ## Uso
 
 Una vez editado el script cerramos y abrimos una nueva terminal y usamos el comando: `net-notify`
 
 ## Modificaciones
+
+#### v2
+
+* Eliminada la dependencia [telegram.sh](https://github.com/fabianonline/telegram.sh)
+
+#### v1
 
 * El usuario [u/knvngy](https://www.reddit.com/user/knvngy/) dio la recomendación de editar la misma linea con los intentos para asi evitar un log muy largo y saturara de información la terminal.
 
