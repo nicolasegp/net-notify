@@ -6,7 +6,7 @@ Mini-Proyecto para notificar cuando llegue el Internet a un equipo mediante el u
 
 ## Requerimientos
 
-* El proyecto usa [telegram.sh](https://github.com/fabianonline/telegram.sh) (Agregado en esto repositorio)
+* El proyecto usa [telegram.sh](https://github.com/fabianonline/telegram.sh) (Agregado en éste repositorio)
 
 ## Instalación
 
