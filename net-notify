@@ -1,11 +1,14 @@
 #!/bin/bash
 
 DNS_SERVER=8.8.8.8
+TOKEN='123456789:ABCDE1-ZYX987fghiGatoPerro'
+CHAT='123456789'
+
 INTERVALO=10
 INTENTO=1
 
-TOKEN='123456:AbcDefGhi-JklMnoPrw'
-CHAT='12345'
+API="https://api.telegram.org/bot${TOKEN}/sendMessage"
+API+="?parse_mode=HTML&chat_id=${CHAT}&text="
 
 clear
 echo
@@ -16,11 +19,11 @@ while true; do
 	if ping -q -c 1 -W 1 $DNS_SERVER > /dev/null; then
 		IP=$(curl -s 'ifconfig.me')
 		echo -e "\e[92m Llegó el Internet"
-		echo -e "\e[96m ● $IP"
-		echo -e "<b>Llegó el Internet</b>\nIP: <code>$IP</code>" | telegram -t $TOKEN -c $CHAT -H -
+		echo -e "\e[96m ● ${IP}"
+		curl -s "${API}%3Cb%3ELleg%C3%B3%20el%20Internet%3C%2Fb%3E%0A%E2%80%A2%20IP%3A%20%3Ccode%3E${IP}%3C%2Fcode%3E" > /dev/null
 		break
 	else
-		echo -ne "\e[91m ● Intento: $INTENTO\r"
+		echo -ne "\e[91m ● Intento: ${INTENTO}\r"
 		INTENTO=$((INTENTO+1))
 	fi
 	sleep $INTERVALO
