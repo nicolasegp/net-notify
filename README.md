@@ -13,14 +13,14 @@ Hilo en reddit: https://www.reddit.com/r/vzla/comments/brqio0/bash_scripting_not
 #### Para telegram.sh
 
 ```bash
-sudo curl -L https://raw.githubusercontent.com/nicolasegp/net-notify/master/telegram -o /usr/local/bin/telegram
+sudo curl https://raw.githubusercontent.com/nicolasegp/net-notify/master/telegram -o /usr/local/bin/telegram
 sudo chmod a+rx /usr/local/bin/telegram
 ```
 
 #### Para net-notify
 
 ```bash
-sudo curl -L https://raw.githubusercontent.com/nicolasegp/net-notify/master/net-notify -o /usr/local/bin/net-notify
+sudo curl https://raw.githubusercontent.com/nicolasegp/net-notify/master/net-notify -o /usr/local/bin/net-notify
 sudo chmod a+rx /usr/local/bin/net-notify
 ```
 
