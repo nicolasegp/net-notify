@@ -7,7 +7,7 @@ Mini-Proyecto para notificar cuando llegue el Internet a un equipo mediante el u
 ## Instalación
 
 ```bash
-sudo curl https://raw.githubusercontent.com/nicolasegp/net-notify/master/net-notify -o /usr/local/bin/net-notify
+sudo curl -L https://git.io/fjRs1 -o /usr/local/bin/net-notify
 sudo chmod a+rx /usr/local/bin/net-notify
 ```
 
