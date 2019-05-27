@@ -9,10 +9,7 @@ INTENTO=1
 LF=$'\n'
 
 clear
-echo
-echo -e "\e[93m [Revisando] \e[96m$DNS_SERVER"
-echo
-
+echo -e "\n\e[93m [Revisando] \e[96m${DNS_SERVER}\n"
 while true; do
 	if ping -q -c 1 -W 1 $DNS_SERVER > /dev/null; then
 		IP=$(curl -s 'ifconfig.me')
