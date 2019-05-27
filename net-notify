@@ -6,9 +6,7 @@ CHAT='123456789'
 
 INTERVALO=10
 INTENTO=1
-
-API="https://api.telegram.org/bot${TOKEN}/sendMessage"
-API+="?parse_mode=HTML&chat_id=${CHAT}&text="
+LF=$'\n'
 
 clear
 echo
@@ -20,7 +18,11 @@ while true; do
 		IP=$(curl -s 'ifconfig.me')
 		echo -e "\e[92m Llegó el Internet"
 		echo -e "\e[96m ● ${IP}"
-		curl -s "${API}%3Cb%3ELleg%C3%B3%20el%20Internet%3C%2Fb%3E%0A%E2%80%A2%20IP%3A%20%3Ccode%3E${IP}%3C%2Fcode%3E" > /dev/null
+		curl -s -X POST \
+			"https://api.telegram.org/bot${TOKEN}/sendMessage" \
+			-d parse_mode='Markdown' \
+			-d chat_id=$CHAT \
+			-d text="*Llegó el Internet*${LF}*• IP:* \`${IP}\`" > /dev/null
 		break
 	else
 		echo -ne "\e[91m ● Intento: ${INTENTO}\r"
