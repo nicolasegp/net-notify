@@ -1,11 +1,18 @@
 #!/bin/bash
 
-DNS_SERVER=8.8.8.8
-TOKEN='123456789:ABCDE1-ZYX987fghiGatoPerro'
-CHAT='123456789'
+# Versión 2.3
 
-INTERVALO=10
-INTENTO=1
+# Config
+DNS_SERVER=8.8.8.8
+TOKEN='123456789:ABCDE1-ZYX987fghiGatoPerro' # Token del Bot
+CHAT='123456789' # Tu ID Personal, del Grupo o Canal
+INTERVALO=1 # Cantidad de segundos en revisar
+# Fin Config
+
+
+
+# No tocar de aqui en adelante
+INICIO=$(date +%s)
 LF=$'\n'
 
 clear
@@ -15,15 +22,17 @@ while true; do
 		IP=$(curl -s 'ifconfig.me')
 		echo -e "\e[92m Llegó el Internet"
 		echo -e "\e[96m ● ${IP}"
+		echo -e "\e[96m ● Transcurrido: ${TIEMPO}"
 		curl -s -X POST \
 			"https://api.telegram.org/bot${TOKEN}/sendMessage" \
 			-d parse_mode='Markdown' \
 			-d chat_id=$CHAT \
-			-d text="*Llegó el Internet*${LF}*• IP:* \`${IP}\`" > /dev/null
+			-d text="*Llegó el Internet*${LF}*• IP:* \`${IP}\`${LF}*• Transcurrido:* \`${TIEMPO}\`" > /dev/null
 		break
 	else
-		echo -ne "\e[91m ● Intento: ${INTENTO}\r"
-		INTENTO=$((INTENTO+1))
+		TIEMPO=$(( $(date +%s) - $INICIO ))
+		TIEMPO=$(date -d @${TIEMPO} -u +%H:%M:%S)
+		echo -ne "\e[91m ● Transcurrido: ${TIEMPO}\r"
 	fi
 	sleep $INTERVALO
 done
