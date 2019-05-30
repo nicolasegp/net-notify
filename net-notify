@@ -13,6 +13,7 @@ INTERVALO=1 # Cantidad de segundos en revisar
 
 # No tocar de aqui en adelante
 INICIO=$(date +%s)
+TIEMPO='00:00:00'
 LF=$'\n'
 
 clear
