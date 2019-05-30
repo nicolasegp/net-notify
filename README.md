@@ -1,6 +1,6 @@
 # net-notify
 
-<img src="https://raw.githubusercontent.com/nicolasegp/net-notify/master/img/v.svg?v=2.3">
+<img src="https://img.shields.io/badge/Versi%C3%B3n-v2.3-blue.svg">
 
 Mini-Proyecto para notificar cuando llegue el Internet a un equipo mediante el uso de la Terminal y Telegram.
 
