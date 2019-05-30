@@ -1,8 +1,10 @@
 # net-notify
 
+<img src="https://raw.githubusercontent.com/nicolasegp/net-notify/master/img/v.svg?v=2.3">
+
 Mini-Proyecto para notificar cuando llegue el Internet a un equipo mediante el uso de la Terminal y Telegram.
 
-> Hilo en Reddit: https://www.reddit.com/r/vzla/comments/brqio0/bash_scripting_notificar_que_llego_internet/
+> Hilo en Reddit: [Bash Scripting: Notificar que llego Internet](https://www.reddit.com/r/vzla/comments/brqio0/bash_scripting_notificar_que_llego_internet/)
 
 ## Instalación
 
@@ -24,6 +26,10 @@ Modificar las variables **TOKEN** _(de su Bot)_ y **CHAT** _(de su cuenta de tel
 Una vez no tengamos internet podemos ejecutar el comando `net-notify` y minimizar la terminal, la idea del script es que nos llegue un mensaje en Telegram apenas el equipo se conecte a internet.
 
 ## Modificaciones
+
+#### v2.3
+
+* Cambiado número de intentos por tiempo transcurrido
 
 #### v2
 
