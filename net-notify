@@ -21,7 +21,7 @@ echo -e "\n\e[93m [Revisando] \e[96m${DNS_SERVER}\n"
 while true; do
 	if ping -q -c 1 -W 1 $DNS_SERVER > /dev/null; then
 		IP=$(curl -s 'ifconfig.me')
-		echo -e "\e[92m Llegó el Internet"
+		echo -e "\033[0K\e[92m Llegó el Internet"
 		echo -e "\e[96m ● ${IP}"
 		echo -e "\e[96m ● Transcurrido: ${TIEMPO}"
 		curl -s -X POST \
@@ -33,7 +33,7 @@ while true; do
 	else
 		TIEMPO=$(( $(date +%s) - $INICIO ))
 		TIEMPO=$(date -d @${TIEMPO} -u +%H:%M:%S)
-		echo -ne "\e[91m ● Transcurrido: ${TIEMPO}\r"
+		echo -ne "\033[0K\e[91m ● Transcurrido: ${TIEMPO}\r"
 	fi
 	sleep $INTERVALO
 done
